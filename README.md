@@ -1,3 +1,23 @@
+# Custom steps to make it work
+
+Install dependencies for Hugo Extended via snap (not sure if needed, but still):
+```sh
+sudo snap install go
+sudo snap install node
+```
+
+Download specific hugo version ([0.136.5](https://github.com/gohugoio/hugo/releases/tag/v0.136.5)) from release assets, now saved n the repo hugo folder
+
+Clean the cache if needed
+```
+./hugo/hugo mod clean --all
+```
+
+Run the server
+```sh
+./hugo/hugo server -D
+```
+
 # [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
 
 [![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)
@@ -5,7 +25,7 @@
 The Hugo **Academic CV Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
 
 [![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
+[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)
 [![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/GetResearchDev)
 
 ️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, Hugo Blox Builder**, making every site truly personalized ⭐⭐⭐⭐⭐
