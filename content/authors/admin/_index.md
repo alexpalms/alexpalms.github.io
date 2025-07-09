@@ -24,8 +24,8 @@ role: AI / ML Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Ubisoft LaForge - Montreal
-    url: https://openai.com/
+  - name: Ubisoft La Forge - Montreal
+    url: https://www.ubisoft.com/en-us/studio/laforge
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -47,9 +47,9 @@ profiles:
   #  url: https://orcid.org/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Reinforcement Learning
+  - LLMs / VLMs / VLAMs
+  - Robotics, Modeling & Simulation
 
 education:
   - area: MSc by Research (Post Graduate) Space Engineering
@@ -196,4 +196,7 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Applied AI/ML Engineer with 13+ years of experience building intelligent agents through Reinforcement Learning, Multimodal Models, and Simulation.
+Delivered production-grade solutions across industries from aerospace and defense to robotics.
+My work spans Reinforcement Learning, physics-based Modeling and Simulation, and now expanding into LLMs, VLMs, and VLAMs.
+Focused on combining embodied learning with RL and multimodal AI to tackle real-world challenges.
