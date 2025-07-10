@@ -4,6 +4,11 @@ summary: Create a personal knowledge base and share your knowledge with your pee
 date: 2023-10-26
 authors:
   - admin
+links:
+- name: Custom Link
+  url: http://example.org
+url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 tags:
   - Second Brain
   - Markdown
