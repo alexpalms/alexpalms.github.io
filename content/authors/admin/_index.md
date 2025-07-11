@@ -102,12 +102,13 @@ work:
     company_logo: ''
     date_start: 2022-12-05
     date_end: ''
-    summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+    summary: |
+      - Built and deployed Deep Reinforcement Learning systems for integration into AAA game environments.
+      - Designed scalable Curriculum and Multi-Agent RL algorithms like League Training.
+      - Worked on Online, Imitation, Offline, and Hierarchical RL, currently exploring multimodal and LLM/VLM agents.
+      - Led development of a distributed RL training pipeline and coordinated cross-site teams.
+      - Integrated AI models into proprietary engines for NPC behavior, testing, and live simulations.
+    skills: C++ · Python · PyTorch · Deep Reinforcement Learning · Large Language Models (LLM) · Docker · Reinforcement Learning · Machine Learning
   - position: AI/ML Consultant
     company_name: Artificial Twin
     contract: Freelance
@@ -116,24 +117,25 @@ work:
     date_start: 2018-02-01
     date_end: ''
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+      - Led AI/ML software development across RL, LLMs, CV, and MLOps, from research to deployment.
+      - Built end-to-end ML systems for real-world and simulated control and multimodal learning.
+      - Developed and deployed transformer-based LLMs (SFT, RLHF/RLAIF) and early VLAM prototypes.
+      - Engineered industrial CV pipelines and deployed models across embedded, on-prem, and cloud.
+      - Created and maintained core libraries for AI/ML, Computational Geometry, and Physical Modeling.
+    skills: C++ · Python · PyTorch · Deep Reinforcement Learning · Large Language Models (LLM) · Computer Vision · Deep Learning · Computational Geometry · Vision Language Models (VLM) · Vision Language Action Models (VLAM) · Reinforcement Learning · Computational Fluid Dynamics
   - position: Founder & Principal AI/ML Engineer
-    company_name: DIAMBRA
+    company_name: DIAMBRA (Acquired in Dec 2024)
     contract: Part-time
     company_url: 'https://diambra.ai/'
     company_logo: ''
     date_start: 2020-11-11
     date_end: 2024-12-11
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+      - Founded and led development of DIAMBRA, a global RL agent competition platform with leaderboards and Twitch-streamed matches.
+      - Built DIAMBRA Arena, a cross-platform package of high-quality RL environments with Gym-compatible API.
+      - Enabled research in single- and multi-agent RL, self-play, imitation learning, and human-in-the-loop settings.
+      - Developed seamless integration interface with popular RL libraries like Stable Baselines 3 and Ray RLlib.
+    skills: C++ · Python · PyTorch · Deep Reinforcement Learning · Docker
   - position: Principal Research Engineer
     company_name: Nurjana Technologies
     contract: Permanent Full-time
@@ -142,11 +144,12 @@ work:
     date_start: 2017-07-17
     date_end: 2022-11-26
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+      - Designed and deployed state-of-the-art AI for autonomous drone missions, including CV-based ISR, flight navigation in GNSS-denied zones, and embedded deployment on Jetson/FPGA.
+      - Led AI/ML algorithm development for space situational awareness with ESA, including orbit propagation, collision risk assessment, and satellite behavior analysis from heterogeneous data.
+      - Delivered autonomous navigation and emergency landing capabilities for drones using object detection, image segmentation, and inertial-only navigation.
+      - Drove simulation-based development of intelligent multi-UAV systems for mission autonomy using RF/optical sensors and synthetic training data.
+      - Developed multi-sensor fusion systems for real-time space debris tracking and orbit determination, successfully tested with the Italian Air Force.
+    skills: C++ · Python · PyTorch · Computer Vision · Deep Learning · Deep Reinforcement Learning · OpenCV · Modeling and Simulation · Space Flight Dynamics
   - position: AI/ML & Simulation Advisor and Industry Expert
     company_name: NATO
     contract: Contract Part-time
@@ -155,23 +158,23 @@ work:
     date_start: 2019-01-01
     date_end: 2022-09-01
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Advised NATO on integrating AI/ML into defense systems, focusing on autonomous systems, sensor fusion, and decision-making under uncertainty.
+      - Contributed to SG238 as part of the AI/ML expert group, enhancing C4I for air defense against UAVs and cruise missiles using real-time AI solutions.
+      - Evaluated AI maturity, trustworthiness, explainability, and human-AI trade-offs for critical defense operations.
+      - Supported development of AI-enabled capabilities to reduce manpower, improve response times, and counter emerging threats like hypersonic and swarm attacks.
+      - Led modeling efforts in SG234 for wind profile prediction to support accurate AI-assisted airdrop missions in high-risk environments.
     skills: Artificial Intelligence · Machine Learning · Deep Learning · Computer Vision · Deep Reinforcement Learning · Flight Dynamics · Computational Fluid Dynamics
   - position: Co-Founder & Research Engineer
-    company_name: CONSELF
+    company_name: CONSELF (Acquired in Feb 2018)
     contract: Full-time
     company_url: 'https://www.linkedin.com/company/conself/'
     company_logo: ''
     date_start: 2019-01-01
     date_end: 2022-09-01
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Led development of high-performance computational meshing algorithms by integrating advanced third-party and proprietary code.
+      - Built robust 3D CAD processing tools using OpenCascade, enabling high-quality browser-based visualization and interaction.
+      - Developed a cloud-based suite of computational geometry tools for mesh repair, surface reconstruction, and CAD file healing.
     skills: C++ · Computational Fluid Dynamics · Computational Geometry · Finite Element Analysis
   - position: Research Engineer
     company_name: Karalit
@@ -181,10 +184,9 @@ work:
     date_start: 2013-01-01
     date_end: 2015-05-30
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Designed and implemented simulation software for advanced physics modeling, including turbulence, rotating flows, and porous media using Navier-Stokes equations.
+      - Built libraries for 3D CAD handling and mesh generation on complex geometries, enabling accurate and flexible discretization.
+      - Optimized parallel performance and resource usage, achieving high scalability and efficiency in scientific computing and 3D data visualization.
     skills: C++ · Computational Fluid Dynamics · Parallel Computing • Fortran
   - position: Flight Simulation Consultant
     company_name: Thales Alenia Space
@@ -194,7 +196,8 @@ work:
     date_start: 2010-10-01
     date_end: 2011-03-01
     summary: |
-      Designed and implemented a multi-body dynamics flight software simulator for the IXV supersonic re-entry vehicle with parachute deployment. Integrated capsule aerodynamics with an adapted parachute model to estimate deceleration profiles during atmospheric re-entry phase.
+      - Designed and implemented a multi-body dynamics flight software simulator for the IXV supersonic re-entry vehicle with parachute deployment.
+      - Integrated capsule aerodynamics with an adapted parachute model to estimate deceleration profiles during atmospheric re-entry phase.
     skills: Modeling and Simulation · Space Flight Dynamics · Multi-body Dynamics
 
 
