@@ -142,7 +142,7 @@
       <div class="">
         <div class="section-subheading mb-3">{{ i18n "work" | markdownify }}</div>
         <ul class="">
-          {{ range . }}
+          {{ range first 5 . }}
           <li class="flex items-start gap-3">
             {{ partial "functions/get_icon" (dict "name" "briefcase" "attributes" "style=\"\" class='flex-shrink-0 w-5 h-5 me-2 mt-1'") }}
             <div class="description">

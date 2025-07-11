@@ -49,7 +49,7 @@ profiles:
 interests:
   - Reinforcement Learning
   - LLMs / VLMs / VLAMs
-  - Robotics, Modeling & Simulation
+  - Embodied/Physical AI
 
 education:
   - area: MSc by Research (Post Graduate) Space Engineering
@@ -95,28 +95,108 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
+  - position: Senior AI Engineer
+    company_name: Ubisoft La Forge - Montreal
+    contract: Permanent Full-time
+    company_url: 'https://www.ubisoft.com/en-us/studio/laforge'
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2022-12-05
     date_end: ''
     summary: |2-
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
+    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+  - position: AI/ML Consultant
+    company_name: Artificial Twin
+    contract: Freelance
+    company_url: 'https://artificialtwin.com/'
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2018-02-01
+    date_end: ''
     summary: |
       Responsibilities include:
       - Migrated infrastructure to a new data center
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+  - position: Founder & Principal AI/ML Engineer
+    company_name: DIAMBRA
+    contract: Part-time
+    company_url: 'https://diambra.ai/'
+    company_logo: ''
+    date_start: 2020-11-11
+    date_end: 2024-12-11
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+  - position: Principal Research Engineer
+    company_name: Nurjana Technologies
+    contract: Permanent Full-time
+    company_url: 'https://www.nurjanatech.com/'
+    company_logo: ''
+    date_start: 2017-07-17
+    date_end: 2022-11-26
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: Modeling and Simulation • Space Flight Dynamics • Multi-body Dynamics
+  - position: AI/ML & Simulation Advisor and Industry Expert
+    company_name: NATO
+    contract: Contract Part-time
+    company_url: 'https://www.nato.int/cps/en/natohq/index.htm'
+    company_logo: ''
+    date_start: 2019-01-01
+    date_end: 2022-09-01
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: Artificial Intelligence · Machine Learning · Deep Learning · Computer Vision · Deep Reinforcement Learning · Flight Dynamics · Computational Fluid Dynamics
+  - position: Co-Founder & Research Engineer
+    company_name: CONSELF
+    contract: Full-time
+    company_url: 'https://www.linkedin.com/company/conself/'
+    company_logo: ''
+    date_start: 2019-01-01
+    date_end: 2022-09-01
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: C++ · Computational Fluid Dynamics · Computational Geometry · Finite Element Analysis
+  - position: Research Engineer
+    company_name: Karalit
+    contract: Permanent Full-time
+    company_url: 'https://www.karalit.com/'
+    company_logo: ''
+    date_start: 2013-01-01
+    date_end: 2015-05-30
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    skills: C++ · Computational Fluid Dynamics · Parallel Computing • Fortran
+  - position: Flight Simulation Consultant
+    company_name: Thales Alenia Space
+    contract: Contract
+    company_url: 'https://www.thalesaleniaspace.com/en'
+    company_logo: ''
+    date_start: 2010-10-01
+    date_end: 2011-03-01
+    summary: |
+      Designed and implemented a multi-body dynamics flight software simulator for the IXV supersonic re-entry vehicle with parachute deployment. Integrated capsule aerodynamics with an adapted parachute model to estimate deceleration profiles during atmospheric re-entry phase.
+    skills: Modeling and Simulation · Space Flight Dynamics · Multi-body Dynamics
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
