@@ -220,36 +220,52 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Programming & Frameworks
     items:
       - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
+      - name: C / C++
+      - name: Fortran
+      - name: PyTorch
+      - name: OpenCV
+      - name: Stable Baselines 3
+      - name: Ray RLlib
+      - name: OpenAI Gym / Gymnasium
+      - name: Transformers (HF)
+
+  - name: AI / Machine Learning
     items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+      - name: Deep Reinforcement Learning
+      - name: Multi-Agent / League Training
+      - name: Offline RL / Hierarchical RL
+      - name: Curriculum Learning
+      - name: Self-Play / Human-in-the-Loop
+      - name: LLMs (SFT, RLHF, DPO, GRPO)
+      - name: VLMs / VLAMs / Multimodal AI
+      - name: Computer Vision
+      - name: Model Optimization
+
+skillsmore:
+  - name: Software Engineering
+    items:
+      - name: Docker
+      - name: CI/CD
+      - name: CMake
+      - name: Git
+      - name: Embedded Systems
+      - name: MLOps
+      - name: Parallel Computing
+      - name: Scientific Visualization
+  - name: Simulation & Robotics
+    items:
+      - name: Modeling & Simulation
+      - name: Space Flight Dynamics
+      - name: Multibody Dynamics
+      - name: Autonomous Drones / UAVs
+      - name: Sensor Fusion
+      - name: Computational Fluid Dynamics
+      - name: Finite Element Analysis
+      - name: 3D CAD Handling & Meshing
+
 
 languages:
   - name: English
@@ -295,7 +311,7 @@ awards:
 
 ## About Me
 
-Applied AI/ML Engineer with 13+ years of experience building intelligent agents through Reinforcement Learning, Multimodal Models, and Simulation.
+Applied AI/ML Engineer with 15 years of experience building intelligent agents through Reinforcement Learning, Multimodal Models, and Simulation.
 Delivered production-grade solutions across industries from aerospace and defense to robotics.
 My work spans Reinforcement Learning, physics-based Modeling and Simulation, and now expanding into LLMs, VLMs, and VLAMs.
 Focused on combining embodied learning with RL and multimodal AI to tackle real-world challenges.
