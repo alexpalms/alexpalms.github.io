@@ -54,46 +54,62 @@ interests:
 education:
   - area: MSc by Research (Post Graduate) Space Engineering
     institution: University of Glasgow
+    institution_url: 'https://www.gla.ac.uk/'
     date_start: 2010-09-01
     date_end: 2011-08-31
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+      Research activity and Master Thesis in Space Flight Dynamics, Flexible Structures Attitude Control and Optimization Methods.
+
+      Applied attitude control on flexible structures, integrating attitude motion dynamics with low order finite element structural models. Developed a software simulator based on the derived equations and interfaced with a custom implementation of different Evolutionary Algorithms (GA, PSO) used to study optimal actuator placement.
     button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
+      text: 'Download Thesis'
+      url: ../uploads/MScByResearchThesis.pdf
   - area: MSc AeroSpace Engineering
     institution: Turin Polytechnic
+    institution_url: 'https://www.polito.it/'
     date_start: 2008-09-01
     date_end: 2010-07-31
     summary: |
-      GPA: 3.8/4.0
+      Grade: 110/110 Cum Laude
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Master thesis in Space Flight Dynamics: applied perturbative mathematical techniques on Gauss’ variational equations for both classical and equinoctial parameters. Obtained a semi analytical solution requiring only a few simple integrals that can be solved via numerical quadrature. Implemented the derived equations in a software simulator to be used for fast preliminary solution of multi-objective optimization in the context of complex, multi-phase, interplanetary orbital transfers.
+
+      Work later published in Acta Astronautica, Journal of Guidance, Control, and Dynamics, and Advances in the Astronautical Sciences journals (see publications).
+    button:
+      text: 'Download Thesis'
+      url: ../uploads/MScThesis.pdf
   - area: MSc Space Engineering
     institution: Milan Polytechnic
+    institution_url: 'https://www.polimi.it/'
     date_start: 2008-09-01
     date_end: 2010-07-31
     summary: |
-      GPA: 3.4/4.0
+      Grade: 110/110 Cum Laude
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Master thesis in Space Flight Dynamics: applied perturbative mathematical techniques on Gauss’ variational equations for both classical and equinoctial parameters. Obtained a semi analytical solution requiring only a few simple integrals that can be solved via numerical quadrature. Implemented the derived equations in a software simulator to be used for fast preliminary solution of multi-objective optimization in the context of complex, multi-phase, interplanetary orbital transfers.
+
+      Work later published in Acta Astronautica, Journal of Guidance, Control, and Dynamics, and Advances in the Astronautical Sciences journals (see publications).
+
+      Additional master degree received with the Alta Scuola Politecnica program.
+    button:
+      text: 'Download Thesis'
+      url: ../uploads/MScThesis.pdf
+  - area: Multidisciplinary International Program
+    institution: Alta Scuola Politecnica
+    institution_url: 'https://www.asp-poli.it/'
+    date_start: 2009-01-01
+    date_end: 2010-12-01
+    summary: |
+      Joint program offered by Polytechnic University of Turin and Polytechnic University of Milan and reserved to exceptionally talented technology students (Top 2.5%). Focused on Management of Innovation, Dynamics of Creativity, Entrepreneurship and Marketing.
   - area: BSc Aeronautical and Space Engineering
     institution: Turin Polytechnic
+    institution_url: 'https://www.polito.it/'
     date_start: 2005-09-01
     date_end: 2008-07-31
     summary: |
-      GPA: 3.4/4.0
+      Grade: 110/110 Cum Laude
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Thesis in Space Flight Dynamics: developed a software simulator for orbital transfer maneuvers used to compute the Pareto front in Lambert’s Problem context, using a novel parametrization function of transfer orbit eccentricity.
 work:
   - position: Senior AI Engineer
     company_name: Ubisoft La Forge - Montreal
