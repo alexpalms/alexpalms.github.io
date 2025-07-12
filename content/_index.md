@@ -66,7 +66,7 @@ sections:
       text: ""
       filters:
         folders:
-          - publications
+          - papers
         exclude_featured: false
     design:
       view: citation
