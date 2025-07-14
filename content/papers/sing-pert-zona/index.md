@@ -1,5 +1,5 @@
 ---
-title: "Application of singular perturbation theory to space flight dynamics problems"
+title: "Application of Singular Perturbation Theory to Space Flight Dynamics Problems"
 authors:
 - Giulio Avanzini
 - Fabrizio Giulietti
