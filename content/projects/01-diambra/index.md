@@ -1,7 +1,7 @@
 ---
 title: 👩🏼‍🏫 DIAMBRA
 summary: Embed videos, podcasts, code, LaTeX math, and even test students!
-date: 2023-10-24
+date: 2022-10-24
 math: true
 authors:
   - admin

@@ -45,6 +45,7 @@ sections:
   - block: collection
     content:
       title: Projects
+      count: 6
       filters:
         folders:
           - projects
