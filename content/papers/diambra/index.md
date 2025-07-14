@@ -32,9 +32,9 @@ tags:
 - Games
 featured: false
 
-# links:
-# - name: ""
-#   url: ""
+links:
+- name: 'Project'
+  url: '/projects/01-diambra'
 url_pdf: https://arxiv.org/pdf/2210.10595
 url_code: 'https://github.com/diambra'
 url_dataset: ''
