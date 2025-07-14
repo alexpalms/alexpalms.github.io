@@ -13,7 +13,7 @@ tags:
 
 links:
  - name: 'Website'
-   url: 'https://www.diambra.ai/'
+   url: 'https://docs.diambra.ai/'
 
 url_code: "https://github.com/diambra/arena"
 url_pdf: https://arxiv.org/abs/2210.10595
@@ -22,6 +22,12 @@ url_video: 'https://www.youtube.com/watch?v=dw72POyqcqk'
 image:
   caption: ''
 ---
+
+**TL;DR**: *Over four years, I built DIAMBRA, an open platform for training, submitting, and evaluating DeepRL agents in arcade-style environments. It blends custom Gym-compatible environments with training pipelines, tournament infrastructure, and real-time evaluation, making it possible to experiment with single- and multi-agent RL, imitation learning, offline training, and even more advanced techniques like league training. Beyond the tech, it’s a space where you can learn by building, and actually enjoy the process of developing agents, because competing in a video game tournament with your own AI never really gets old.*
+
+[Show me the code](#references)
+
+-------------------------------------
 
 DIAMBRA is a platform I built over four years to explore what happens when you bring Deep Reinforcement Learning into a competitive, community-driven setting. The idea was simple but ambitious: let people train agents in high-quality arcade-style environments and submit them to real tournaments, complete with leaderboards, Twitch-streamed matches, and unlockable achievements.
 
@@ -55,91 +61,118 @@ That was the spark that became DIAMBRA.
 
 ### Project Scope & My Role
 
-Use this to make clear that you weren’t just managing—you were hands-on. Describe what you actually built.
+My role in DIAMBRA covered the full AI/ML stack, from low-level environment design to community-facing tooling. I took care of everything that touched Reinforcement Learning: building the environments from scratch, standardizing interfaces, integrating training libraries, designing the evaluation logic for head-to-head matches, and even running community tournaments with real-time streams on Twitch and YouTube.
 
-Bullet-style or paragraph:
+This meant writing C++ code for performant emulation, building Python bindings over gRPC, setting up Docker pipelines for cross-platform deployment, writing documentation, maintaining repos, engaging with users, and constantly refining how the platform could serve both researchers and hobbyists. What started as a solo effort eventually grew into a proper ecosystem, with contributors, users, tournaments, and a clear identity in the RL landscape.
 
-Led architecture and implementation of the full platform (backend, leaderboard, evaluation infrastructure, Twitch streaming integration)
+Here below are the three core areas I focused on.
 
-Developed the DIAMBRA Arena environment package, providing a Python Gym-compatible API for RL research
-
-Integrated native support for Stable Baselines 3, Ray RLlib, and custom training frameworks
-
-Designed environments supporting multiple modes: standard RL, self-play, human-agent, and imitation learning
-
-Worked on deployment across major OSes (Linux, Windows, MacOS) with simple pip-based install flow
-
-### DIAMBRA Arena: Arcade-Style RL Environments
-Here, highlight:
-
-Episodic tasks with image + numeric observations
-
-Single- and two-player environments
-
-Discrete action spaces
-
-Multi-agent scenarios, competitive agents, and support for self-play
+#### Arcade RL Environments
 
 <div style="text-align: center;">
   <img src="env_loop.png" alt="Agent-Environment Loop" style="display: block; margin: 0 auto;" />
   <p><em>Agent-Environment Interaction Loop</em></p>
 </div>
 
+At the heart of DIAMBRA was a suite of high-quality arcade-style environments built to balance realism, playability, and research flexibility. I designed them with the goal of being fun to work with, but also rich enough to support serious experimentation.
+
+
+- All environments followed the **Gymnasium API standard**, making them instantly compatible with mainstream RL libraries.
+- Observations included both **raw pixel frames** and **structured numerical state data**, which enabled hybrid models and richer architectures.
+- Under the hood, environments were written in **C++ for speed**, exposed to Python via **gRPC**, and **fully Dockerized** to ensure reproducibility and smooth deployment.
+- I implemented **native support for Stable Baselines 3 and Ray RLlib**, while keeping things flexible enough for custom training pipelines.
+- Each environment supported multiple modalities:
+  - **Single-agent** tasks (AI vs CPU)
+  - **Multi-agent adversarial** setups (AI vs AI, including self-play)
+  - **Human-agent interaction**
+  - **Imitation learning scenarios**
+
+I also worked on portability across platforms, supporting Linux, Windows, and MacOS, and packaged everything for simple installation via `pip`. This made DIAMBRA Arena one of the few plug-and-play RL environments that felt polished, high-performance, and research-friendly.
+
 <div style="text-align: center;">
   <img src="spaces.jpg" alt="Observation and Action Space" style="display: block; margin: 0 auto;" />
   <p><em>Observation and Action Space</em></p>
 </div>
 
-### Training Agents
+#### Training Agents
 
-Explain how users trained agents:
+To make experimentation fast and reproducible, I built **starter kits** and full training pipelines in the [DIAMBRA Agents](https://github.com/diambra/agents) repo.
 
-With SB3 or RLlib
-
-With your provided starter kits: diambra/agents
-
-Use of PPO/DQN-style agents
-
-League training or human-in-the-loop workflows (if supported)
+These covered popular training algorithms like PPO, with modular support for plugging in custom networks or reward shaping strategies. The environments were designed with just enough structure to make RL tractable on consumer hardware, without sacrificing the challenge.
 
 <div style="text-align: center;">
   <img src="training_architecture.jpg" alt="Training Architecture" style="display: block; margin: 0 auto;" />
   <p><em>Training Architecture</em></p>
 </div>
 
+We also showed that [DIAMBRA could scale to more advanced training setups, including league training strategies](https://github.com/alexpalms/DIAMBRA-Arena-MARL-TLeague) (multi-agent population-based curriculum), which are typically used in competitive or self-play scenarios.
+
+<div style="text-align: center;">
+  <img src="marl.gif" alt="League Training" style="display: block; margin: 0 auto;" />
+  <p><em>League Training</em></p>
+</div>
+
+The idea was to give users a launchpad: whether you were experimenting with a new algorithm, fine-tuning reward signals, or testing generalization strategies, DIAMBRA’s training stack made it easy to get started and iterate quickly.
+
+Here are a couple of videos showing agents at different training stages.
+
 {{< youtube e8ej8Mm9l4E >}}
+
+<div style="text-align: center;">
+  <p><em>Dead Or Alive ++</em></p>
+</div>
 
 {{< youtube LoXGCmfFV2w >}}
 
-### Evaluation & Tournament Infrastructure
+<div style="text-align: center;">
+  <p><em>Tekken Tag Tournament</em></p>
+</div>
 
-Describe the global leaderboard concept
+#### Evaluation & Tournament Infrastructure
 
-Explain how agents were submitted, evaluated, and ranked
+Once you’ve trained your agent, what’s next? In DIAMBRA, you could submit it to the **public platform**, where it would be evaluated in head-to-head matches, either against the built-in CPU opponent (AI vs COM) or other users’ agents (AI vs AI).
 
-Mention the Twitch integration and visual streaming of matches
+Behind the scenes, I built an agent orchestration system that handled:
+ - **Episode scheduling and rollout** for 1v1 matches
+ - **Evaluation metric tracking** (win rates, performance scores, behaviors)
+ - **Leaderboard computation** across games and users
+ - **Achievement unlocking** based on specific milestones (e.g., winning a round without taking damage)
 
-Talk about fairness, reproducibility, and benchmarking
+All episodes were **recorded and streamed automatically** on Twitch, turning agent performance into something visible and shareable. This added a layer of excitement and transparency to the process, users could *watch* their agents compete, win, lose, or evolve over time.
 
-### Technical Highlights
+This system not only made RL evaluation more engaging, but also allowed for **benchmarking** and **reproducibility**, two things often missing in casual RL experimentation.
 
-Here you can list or briefly explain:
+### Reflections
 
-Cross-platform support
-
-Standardization (Gym API, SB3/RLlib integration)
-
-Reusability of environments for multiple RL paradigms (online, offline, imitation)
-
-Reproducibility features: seeding, repeatable episodes, etc.
+Looking back, what I gained the most from DIAMBRA wasn’t just experience, it was depth. There’s something about building a full system from scratch that forces you to really learn a topic. You hit every corner case, every design tradeoff, every weird bug that only shows up after 10,000 episodes. You don’t just understand the theory, you live it.
 
 {{< youtube nyiHz6IPSks >}}
 
+<div style="text-align: center;">
+  <p><em>Reward Engineering</em></p>
+</div>
+
+That process took me deep into areas of RL that you usually only skim in tutorials: observation preprocessing, action space design, environment determinism, reproducibility, reward hacking, evaluation pipelines, agent orchestration, and more. I had to really solve these problems, and in doing so, I developed a much stronger, more intuitive grasp of what actually makes RL work (or break).
+
 {{< youtube dwz7mMdKRao >}}
+
+<div style="text-align: center;">
+  <p><em>Reward Hacking</em></p>
+</div>
+
+But if I had to name the single best thing about the project, it’s the **pure range of experimentation it unlocks**. With DIAMBRA, you can:
+ - Train agents using online, offline, or imitation learning
+ - Explore multi-agent setups, self-play, or human-agent interaction
+ - Play with reward shaping, and discover how easily it leads to reward hacking
+ - Even try out unconventional things like applying neural style transfer to tweak visual observations
 
 {{< youtube MzC0vfw9f-g >}}
 
-### Reflections
+<div style="text-align: center;">
+  <p><em>Neural Style Transfer</em></p>
+</div>
+
+And all of this happens in a setting that’s genuinely fun to use. There’s something really satisfying about seeing your PPO agent finally beat a CPU opponent in a game you used to play as a kid. It brings a bit of play back into research, and that’s something I’ve come to really value.
 
 ### References
 
@@ -147,5 +180,7 @@ Reproducibility features: seeding, repeatable episodes, etc.
   - Project page: https://github.com/diambra/
   - Environment: https://github.com/diambra/arena
   - Agent training examples: https://github.com/diambra/agents
+  - League training: https://github.com/alexpalms/DIAMBRA-Arena-MARL-TLeague
+  - Neural painter: https://github.com/alexpalms/diambra-game-painter
 - 🎓 Paper: https://arxiv.org/abs/2210.10595
 - 📚 Docs: https://docs.diambra.ai/
