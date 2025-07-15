@@ -35,6 +35,8 @@ Under the hood, DIAMBRA became a surprisingly deep technical project, covering e
 
 For me, it was a chance to get deeply involved in everything I love: RL, simulation, software architecture, and building things that people actually use.
 
+In December 2024, DIAMBRA was acquired, marking a meaningful endpoint to a long, hands-on journey, and a testament to the value of deeply technical, open, and community-driven work in the Reinforcement Learning space.
+
 {{< youtube zs-3qltqa7o >}}
 
 ### Motivation
