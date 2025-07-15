@@ -140,6 +140,11 @@ Behind the scenes, I built an agent orchestration system that handled:
 
 All episodes were **recorded and streamed automatically** on Twitch, turning agent performance into something visible and shareable. This added a layer of excitement and transparency to the process, users could *watch* their agents compete, win, lose, or evolve over time.
 
+<div style="text-align: center;">
+  <img src="evaluator.jpg" alt="Evaluator Architecture" style="display: block; margin: 0 auto;" />
+  <p><em>Not the most trivial side-project. And this is just the evaluator piece...</em></p>
+</div>
+
 This system not only made RL evaluation more engaging, but also allowed for **benchmarking** and **reproducibility**, two things often missing in casual RL experimentation.
 
 ### Reflections
