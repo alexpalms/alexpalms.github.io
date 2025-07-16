@@ -1,6 +1,6 @@
 ---
-title: 🛡️ Counter-UAV Swarm
-summary: Embed videos, podcasts, code, LaTeX math, and even test students!
+title: 🛡️ RL-Driven Counter-UAV Swarm Defense
+summary: Using Reinforcement Learning to coordinate multiple kinetic effectors and defend a sensitive area from large-scale kamikaze drone swarms, trained entirely in a custom-built, high-fidelity simulation.
 date: 2022-01-02
 math: true
 authors:
@@ -10,123 +10,81 @@ tags:
   - Counter UAV Swarms
   - Defense
 image:
-  caption: 'Embed rich media such as videos and LaTeX math'
-draft: true
+  caption: ''
+draft: false
 ---
 
-[Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
+### Motivation
 
-**Embed videos, podcasts, code, LaTeX math, and even test students!**
+The rise of low-cost, autonomous drone swarms has transformed the threat landscape, what used to be science fiction is now a tactical reality. Swarms composed of dozens (or even hundreds) of kamikaze UAVs can overwhelm traditional air defense systems through sheer volume, speed, and unpredictability.
 
-On this page, you'll find some examples of the types of technical content that can be rendered with Hugo Blox.
+Conventional rule-based or reactive systems often struggle in this context. They lack the ability to prioritize threats intelligently, coordinate actions across multiple effectors, or adapt to scenarios with noisy or incomplete information. As the problem space grows more complex, with heterogeneous drone behaviors, uncertain trajectories, and probabilistic engagement outcomes, these limitations become critical.
 
-## Video
+That’s where Reinforcement Learning comes in. Unlike hand-coded strategies, RL allows policies to emerge organically through experience. It can handle uncertainty, adapt to new swarm patterns, and balance multiple objectives, like minimizing damage, conserving resources, and avoiding overkill. More importantly, it offers the opportunity to learn behaviors that would be hard, or even impossible, to design manually.
 
-Teach your course by sharing videos with your students. Choose from one of the following approaches:
+In this project, I wanted to explore whether a trained RL agent could learn to coordinate multiple kinetic effectors to defend a fixed zone from a large-scale kamikaze drone attack. The agent operates under partial observability, receives noisy positional data, and must make real-time decisions to intercept threats before they reach the target.
 
-**Video 1**:
+The result is a fully custom, simulation-based control problem that closely mirrors the kind of decision-making challenges faced in real-world defense systems, complex, fast-moving, and high-stakes. Not only did the RL-trained model learn to navigate this space effectively, but it also significantly outperformed classical control solutions, demonstrating superior threat prioritization, coordination, and overall reduction in target zone damage.
 
-{{< youtube 2IXsMAdAEBU >}}
+###  Problem Framing & System Design
 
-**Video 1**:
+At a high level, the challenge involves a number of kinetic effectors tasked with defending a set of sensitive zones against incoming kamikaze drones. These drones vary in size, explosive yield, and flight path, and are deployed in large, randomized swarms with the goal of overwhelming the defense system.
 
-{{< youtube dw72POyqcqk >}}
+Each episode simulates a coordinated attack: dozens of drones approach one or more target zones following random (but continuous and goal-directed) trajectories. The agent receives partial and noisy observations of the environment, simulated detections include drone positions with Gaussian noise, and imperfect estimates of size and explosive type. Despite this uncertainty, the agent must coordinate its effectors to minimize total damage, making fast and effective firing decisions in real time.
 
-**Video 1**:
+This control problem blends stochastic dynamics, high-dimensional state spaces, and asymmetric cost structures, making it both a practical and research-grade RL testbed. Below, I describe how the simulation environment and RL system were built.
 
-{{< youtube XEJ9QfmmzwM >}}
+#### Simulation Environment
 
-## Podcast
+The environment was built from scratch to capture the complexity and realism of modern drone defense scenarios. The key components include:
+- **Kinetic Effectors**: Each effector can rotate in azimuth and elevation, with bounded angular velocity. After each shot, a recharging delay is enforced. Hits are probabilistic, **neutralization probability** is modeled as a function of the miss distance between the shot and the *real* drone position.
+- **Sensitive Zones**: Fixed within the scenario and assigned different **strategic values**, meaning that damage is weighted differently depending on which zone is hit. This encourages the agent to **prioritize threats**, not just maximize shot counts.
+- **Drones**: Each drone is sampled from a custom distribution of **sizes and explosive types**, affecting its flight profile and potential impact. Trajectories are randomized per episode, with fixed start and end goals but variable motion paths.
+- **Observations**: The agent receives a vector per drone with:
+  - Noisy 3D position
+  - Noisy estimate of size
+  - Noisy estimate of explosive type
+- **Actions**: For each effector, the agent selects which **drone to target** (if any) at every timestep. The rest, rotations, delays, and miss distance evaluation, is handled by the simulation.
+- **Reward Function**: The episode return is based on **total zone damage**, computed as a function of the drone's explosive yield and the zone's strategic value. The agent is implicitly incentivized to minimize this sum.
+- **Scenario Variability**: While zone and effector positions are fixed per scenario, each episode features a randomized drone swarm, with variable initial positions, destinations, and flight dynamics, creating a **rich distribution of challenges** to learn from.
 
-You can add a podcast or music to a page by placing the MP3 file in the page's folder or the media library folder and then embedding the audio on your page with the _audio_ shortcode:
+#### Reinforcement Learning
 
-    {{</* audio src="ambient-piano.mp3" */>}}
+The control policy was trained using **Proximal Policy Optimization (PPO)**, chosen for its robustness in handling environments with high-dimensional, partially observable state spaces and delayed rewards.
 
-Try it out:
+The setup consisted of a **centralized policy model** that controlled all effectors jointly. At each timestep, the policy receives the full observation vector (structured across all active drones) and outputs a **discrete action** for each effector, specifying which drone (if any) to target. This enables joint decision-making across effectors while keeping the interface clean and interpretable.
 
-{{< audio src="ambient-piano.mp3" >}}
+- **Observation Preprocessing**: Before feeding observations into the network, raw drone data was normalized per feature (position, size, explosive type) and structured into a fixed-size input, padded as needed. This helped the model generalize across swarm sizes and drone configurations.
+- **Policy Architecture**: The policy was a simple but effective **multi-layer perceptron (MLP)** processing the full input and jointly outputting one discrete action per effector. The network learned to implicitly coordinate effectors, allocating targets to avoid redundancy and prioritize high-threat drones.
+- **Reward Normalization**: Since total episode damage could vary widely depending on the incoming swarm, **reward normalization** was applied across the training buffer. This improved gradient stability and accelerated convergence during early training.
 
-## Test students
+This setup allowed the agent to evolve beyond reflex-based responses, learning to **balance firing cadence, coordinate targeting, and even hold fire** when interception was unlikely, leading to strategic behavior that clearly outperformed hand-coded baselines.
 
-Provide a simple yet fun self-assessment by revealing the solutions to challenges with the `spoiler` shortcode:
+### Training & Evaluation
 
-```markdown
-{{</* spoiler text="👉 Click to view the solution" */>}}
-You found me!
-{{</* /spoiler */>}}
-```
+Training the RL agent wasn’t just about running PPO out of the box, it required thoughtful tuning and iteration to reach robust, generalizable performance. I conducted a **hyperparameter search** exploring several key factors:
 
-renders as
+- **Network architecture**: Number of hidden layers and neurons per layer
+- **Learning rate and scheduling** (linear decay vs constant)
+- **Discount factor** and **clipping range**
+- **Number of parallel environments** used for experience collection
 
-{{< spoiler text="👉 Click to view the solution" >}} You found me 🎉 {{< /spoiler >}}
+The goal was to balance **sample efficiency** and **policy stability**, while avoiding premature convergence to suboptimal reactive behaviors (e.g., always targeting the closest drone). Periodic **checkpoint-based evaluations** were used during training to assess how well the agent was generalizing beyond its training buffer.
 
-## Math
+To properly benchmark performance, I ran a full evaluation comparing three policies across a large number of randomized swarm scenarios:
 
-Hugo Blox Builder supports a Markdown extension for $\LaTeX$ math. Enable math by setting the `math: true` option in your page's front matter, or enable math for your entire site by toggling math in your `config/_default/params.yaml` file:
+- **Random agent**: Selects targets uniformly at random for each effector.
+- **Classic control policy**: Implements a hand-crafted heuristic prioritizing drones based on their **distance to sensitive zones**, weighted by **zone value** and **estimated drone explosive power**. It includes a distribution heuristic to avoid over-targeting the same drone.
+- **Deep RL agent**: The PPO-trained model described above.
 
-```yaml
-features:
-  math:
-    enable: true
-```
+Each agent was evaluated across **hundreds of randomized episodes**, measuring the **total damage inflicted to sensitive zones** as the main metric. I tracked both **average damage** and **standard deviation** to assess not only performance but also **stability under diverse conditions**.
 
-To render _inline_ or _block_ math, wrap your LaTeX math with `$...$` or `$$...$$`, respectively.
+### Results
 
-Example **math block**:
+The results were clear: the **Deep RL agent consistently outperformed** both the random and classical baselines, achieving lower average damage and greater consistency across swarm configurations. This indicated that the learned policy wasn’t just reacting faster, it was strategically prioritizing threats and adapting to uncertainty in a way that hand-coded rules simply couldn’t match.
 
-```latex
-$$
-\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
-$$
-```
+### Reflections
 
-renders as
+### References
 
-$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-
-Example **inline math** `$\nabla F(\mathbf{x}_{n})$` renders as $\nabla F(\mathbf{x}_{n})$.
-
-Example **multi-line math** using the math linebreak (`\\`):
-
-```latex
-$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} & \text{if }k=1, \\
-1-p_{0}^{*} & \text{if }k=0.\end{cases}$$
-```
-
-renders as
-
-$$
-f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} & \text{if }k=1, \\
-1-p_{0}^{*} & \text{if }k=0.\end{cases}
-$$
-
-## Code
-
-Hugo Blox Builder utilises Hugo's Markdown extension for highlighting code syntax. The code theme can be selected in the `config/_default/params.yaml` file.
-
-
-    ```python
-    import pandas as pd
-    data = pd.read_csv("data.csv")
-    data.head()
-    ```
-
-renders as
-
-```python
-import pandas as pd
-data = pd.read_csv("data.csv")
-data.head()
-```
-
-## Inline Images
-
-```go
-{{</* icon name="python" */>}} Python
-```
-
-renders as
-
-{{< icon name="python" >}} Python
-
-## Did you find this page helpful? Consider sharing it 🙌
+- 👨🏽‍💻 GitHub Code: https://github.com/diambra/

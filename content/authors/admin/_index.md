@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: AI / ML Engineer
+role: AI/ML Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -111,7 +111,7 @@ education:
 
       Thesis in Space Flight Dynamics: developed a software simulator for orbital transfer maneuvers used to compute the Pareto front in Lambert’s Problem context, using a novel parametrization function of transfer orbit eccentricity.
 work:
-  - position: Senior AI Engineer
+  - position: Senior AI/ML Engineer
     company_name: Ubisoft La Forge - Montreal
     contract: Permanent Full-time
     company_url: 'https://www.ubisoft.com/en-us/studio/laforge'
