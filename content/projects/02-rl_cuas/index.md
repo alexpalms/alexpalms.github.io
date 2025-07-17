@@ -26,6 +26,11 @@ In this project, I wanted to explore whether a trained RL agent could learn to c
 
 The result is a fully custom, simulation-based control problem that closely mirrors the kind of decision-making challenges faced in real-world defense systems, complex, fast-moving, and high-stakes. Not only did the RL-trained model learn to navigate this space effectively, but it also significantly outperformed classical control solutions, demonstrating superior threat prioritization, coordination, and overall reduction in target zone damage.
 
+<div style="text-align: center;">
+  <img src="drones_chart.png" alt="Drones Chart" style="display: block; margin: 0 auto;" />
+  <p><em>Increase in Drones Attack in Recent Conflicts</em></p>
+</div>
+
 ###  Problem Framing & System Design
 
 At a high level, the challenge involves a number of kinetic effectors tasked with defending a set of sensitive zones against incoming kamikaze drones. These drones vary in size, explosive yield, and flight path, and are deployed in large, randomized swarms with the goal of overwhelming the defense system.
@@ -47,6 +52,11 @@ The environment was built from scratch to capture the complexity and realism of 
 - **Actions**: For each effector, the agent selects which **drone to target** (if any) at every timestep. The rest, rotations, delays, and miss distance evaluation, is handled by the simulation.
 - **Reward Function**: The episode return is based on **total zone damage**, computed as a function of the drone's explosive yield and the zone's strategic value. The agent is implicitly incentivized to minimize this sum.
 - **Scenario Variability**: While zone and effector positions are fixed per scenario, each episode features a randomized drone swarm, with variable initial positions, destinations, and flight dynamics, creating a **rich distribution of challenges** to learn from.
+
+<div style="text-align: center;">
+  <img src="simulator.png" alt="Simulation" style="display: block; margin: 0 auto;" />
+  <p><em>Simulation Visualization</em></p>
+</div>
 
 #### Reinforcement Learning
 
@@ -71,6 +81,21 @@ Training the RL agent wasn’t just about running PPO out of the box, it require
 
 The goal was to balance **sample efficiency** and **policy stability**, while avoiding premature convergence to suboptimal reactive behaviors (e.g., always targeting the closest drone). Periodic **checkpoint-based evaluations** were used during training to assess how well the agent was generalizing beyond its training buffer.
 
+```less
+[Input Obs]
+     |
+[Flatten drones_zones_distance]
+     |
+[Linear 150→64 + ReLU]
+     |-------------------------------|
+     |                               |
+[pi_policy_net]                  [vf_value_net]
+ (Linear 64→64 + ReLU)           (Linear 64→64 + ReLU)
+     |                               |
+[action_net: Linear 64→200]      [value_net: Linear 64→1]
+
+```
+
 To properly benchmark performance, I ran a full evaluation comparing three policies across a large number of randomized swarm scenarios:
 
 - **Random agent**: Selects targets uniformly at random for each effector.
@@ -82,6 +107,22 @@ Each agent was evaluated across **hundreds of randomized episodes**, measuring t
 ### Results
 
 The results were clear: the **Deep RL agent consistently outperformed** both the random and classical baselines, achieving lower average damage and greater consistency across swarm configurations. This indicated that the learned policy wasn’t just reacting faster, it was strategically prioritizing threats and adapting to uncertainty in a way that hand-coded rules simply couldn’t match.
+
+<div style="text-align: center;">
+  <img src="chart.jpg" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
+  <p><em>DeepRL vs Classic Controller - Damage Comparison</em></p>
+</div>
+
+{{< youtube GooNFDk42Nw >}}
+
+<div style="text-align: center;">
+  <p><em>DeepRL vs Classic Controller Full Episode Performance Comparison</em></p>
+</div>
+
+<div style="text-align: center;">
+  <img src="final_state.png" alt="Final Simulation Step" style="display: block; margin: 0 auto;" />
+  <p><em>DeepRL vs Classic Controller - Final Simulation Step Comparison</em></p>
+</div>
 
 ### Reflections
 
