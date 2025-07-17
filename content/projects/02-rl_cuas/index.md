@@ -14,6 +14,10 @@ image:
 draft: false
 ---
 
+**TL;DR**: *I trained a centralized Reinforcement Learning policy to coordinate multiple kinetic effectors in defending sensitive zones from kamikaze drone swarms. Built entirely in a custom simulation with noisy detections and probabilistic outcomes, the RL agent learned to prioritize threats more effectively than a handcrafted heuristic. It consistently reduced damage in evaluation, showing strategic coordination and adaptability. Designed as a decision support layer, not a black-box controller, the system is both performant and safe, pointing to RL’s real potential in modern defense scenarios.*
+
+[Show me the code](#references)
+
 ### Motivation
 
 The rise of low-cost, autonomous drone swarms has transformed the threat landscape, what used to be science fiction is now a tactical reality. Swarms composed of dozens (or even hundreds) of kamikaze UAVs can overwhelm traditional air defense systems through sheer volume, speed, and unpredictability.
