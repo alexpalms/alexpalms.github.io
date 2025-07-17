@@ -95,6 +95,10 @@ The goal was to balance **sample efficiency** and **policy stability**, while av
 [action_net: Linear 64→200]      [value_net: Linear 64→1]
 
 ```
+<div style="text-align: center;">
+  <p><em>Neural Network Architecture</em></p>
+</div>
+
 
 To properly benchmark performance, I ran a full evaluation comparing three policies across a large number of randomized swarm scenarios:
 
@@ -106,25 +110,43 @@ Each agent was evaluated across **hundreds of randomized episodes**, measuring t
 
 ### Results
 
-The results were clear: the **Deep RL agent consistently outperformed** both the random and classical baselines, achieving lower average damage and greater consistency across swarm configurations. This indicated that the learned policy wasn’t just reacting faster, it was strategically prioritizing threats and adapting to uncertainty in a way that hand-coded rules simply couldn’t match.
+The results consistently demonstrate the effectiveness of the Deep RL approach.
+
+**Statistical Performance Overview.** A high-volume batch of randomized simulation episodes (same scenario setup, varied drone trajectories) was used to benchmark both the classic and the learned policy.
+The distribution of total suffered damage across these episodes reveals a significant advantage for the RL controller. Gaussian fits over the episode outcomes show a clear shift: the RL agent results in an average damage of 46%, compared to 53% for the classic heuristic, a meaningful reduction given the critical nature of the defense task.
 
 <div style="text-align: center;">
   <img src="chart.jpg" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
   <p><em>DeepRL vs Classic Controller - Damage Comparison</em></p>
 </div>
 
+**Behavioral Comparison - Side-by-Side Simulation.** To illustrate the behavioral difference more tangibly, we provide a video comparison where both controllers are subjected to the exact same drone swarm configuration, thanks to controlled simulation seeding.
+The classic policy follows a fixed logic based on proximity and estimated threat, while the RL policy exhibits more nuanced, adaptive target selection and coordination, leading to better prioritization and interception.
+
 {{< youtube GooNFDk42Nw >}}
 
 <div style="text-align: center;">
-  <p><em>DeepRL vs Classic Controller Full Episode Performance Comparison</em></p>
+  <p><em>DeepRL vs Classic Controller - Full Episode Performance Comparison</em></p>
 </div>
+
+**Final State Snapshot.** A side-by-side image of the simulation's end state clearly shows the impact: while both policies allow some damage, the RL agent more effectively protects the highest-value sensitive zones, redirecting threats or neutralizing them early. The classic controller fails to make such distinctions, resulting in suboptimal damage distribution.
 
 <div style="text-align: center;">
   <img src="final_state.png" alt="Final Simulation Step" style="display: block; margin: 0 auto;" />
   <p><em>DeepRL vs Classic Controller - Final Simulation Step Comparison</em></p>
 </div>
 
+Together, these results validate the use of reinforcement learning not just as a viable solution, but as a superior one, in orchestrating complex, reactive defense systems under uncertainty.
+
 ### Reflections
+
+This project highlights the significant potential of **Reinforcement Learning as a control paradigm** in defense scenarios that are fast-paced, uncertain, and too complex for traditional rule-based systems to handle effectively. When tasked with prioritizing threats in a dynamic multi-agent swarm setting, the learned policy consistently outperformed handcrafted logic, not by exploiting low-level dynamics, but by developing adaptive, emergent behaviors from the data and objectives we provided.
+
+Importantly, the RL agent here does **not directly control actuators** or make irreversible decisions. Its role is intentionally abstracted: to **prioritize threats** based on noisy, probabilistic data and mission-critical tradeoffs. This higher-level positioning allows the system to act **as an intelligent recommender**, rather than a fully autonomous agent, an important distinction when deploying AI in safety-critical contexts.
+
+Moreover, this structure opens the door for **Human-in-the-Loop operation**. The RL policy’s prioritization scores can be surfaced to human operators as an additional signal, essentially a real-time estimate of "threat level" derived from complex, learned dynamics. This transforms the AI from a black-box decision-maker into a powerful **decision support system**, augmenting situational awareness and assisting, rather than replacing, operator judgment.
+
+This experiment not only demonstrated strong performance gains, but also a viable path to safely and meaningfully **integrate RL into real-world defense architectures**, where adaptability, interpretability, and collaboration with human operators are paramount.
 
 ### References
 
