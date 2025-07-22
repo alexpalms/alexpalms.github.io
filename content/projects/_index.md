@@ -12,8 +12,8 @@ sections:
   - block: collection
     content:
       count: 0
-      title: Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Open Source Projects
+      text: Building is the fastes way to learn.
       filters:
         folders:
           - projects

@@ -44,8 +44,9 @@ sections:
   #    columns: '1'
   - block: collection
     content:
-      title: Projects
-      count: 6
+      title: Open Source Projects
+      text: Building is the fastes way to learn.
+      count: 3
       filters:
         folders:
           - projects
