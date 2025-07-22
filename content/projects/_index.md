@@ -13,7 +13,7 @@ sections:
     content:
       count: 0
       title: Open Source Projects
-      text: Building is the fastes way to learn.
+      text: Building is the fastest way to learn.
       filters:
         folders:
           - projects
