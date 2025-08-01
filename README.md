@@ -18,6 +18,8 @@ Run the server
 ./hugo/hugo server -D
 ```
 
+To customize layout partials, use the source one here: https://github.com/HugoBlox/hugo-blox-builder/tree/main/modules/blox-tailwind/layouts
+
 # [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
 
 [![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)
