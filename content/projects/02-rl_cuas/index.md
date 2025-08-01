@@ -1,5 +1,5 @@
 ---
-title: 🛡️ RL-Driven Counter-UAV Swarm Defense
+title: 🛡️ Reinforcement Learning for Decision-Level Interception Prioritization in Drone Swarm Defense
 summary: Using Reinforcement Learning to coordinate multiple kinetic effectors and defend a sensitive area from large-scale kamikaze drone swarms, trained entirely in a custom-built, high-fidelity simulation.
 date: 2025-07-01
 math: true
@@ -37,7 +37,7 @@ The result is a fully custom, simulation-based control problem that closely mirr
 
 <div style="text-align: center;">
   <img src="drones_chart.png" alt="Drones Chart" style="display: block; margin: 0 auto;" />
-  <p><em>Increase in Drones Attack in Recent Conflicts</em></p>
+  <p><em>Increase in Drones Attack in Recent Conflicts - Source: <a href="https://www.csis.org/analysis/calculating-cost-effectiveness-russias-drone-strikes" target="_blank">Center for Strategic and International Studies</a></em></p>
 </div>
 
 ###  Problem Framing & System Design
@@ -64,7 +64,7 @@ The environment was built from scratch to capture the complexity and realism of 
 
 <div style="text-align: center;">
   <img src="simulator.png" alt="Simulation" style="display: block; margin: 0 auto;" />
-  <p><em>Simulation Visualization</em></p>
+  <p><em>Simulation environment showing a snapshot of multiple kamikaze drones approaching protected zones and the corresponding effector system responses.</em></p>
 </div>
 
 #### Reinforcement Learning
@@ -122,11 +122,11 @@ Each agent was evaluated across **hundreds of randomized episodes**, measuring t
 The results consistently demonstrate the effectiveness of the Deep RL approach.
 
 **Statistical Performance Overview.** A high-volume batch of randomized simulation episodes (same scenario setup, varied drone trajectories) was used to benchmark both the classic and the learned policy.
-The distribution of total suffered damage across these episodes reveals a significant advantage for the RL controller. Gaussian fits over the episode outcomes show a clear shift: the RL agent results in an average damage of 46%, compared to 53% for the classic heuristic, a meaningful reduction given the critical nature of the defense task.
+The distribution of total suffered damage across these episodes reveals a significant advantage for the RL controller. Gaussian fits over the episode outcomes show a clear shift: the RL agent results in an average damage of 41.30%, compared to 50.34% for the classic heuristic, a meaningful reduction given the critical nature of the defense task. Additional analyses on different metrics are presented in the paper.
 
 <div style="text-align: center;">
-  <img src="chart.jpg" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
-  <p><em>DeepRL vs Classic Controller - Damage Comparison</em></p>
+  <img src="damage_distributions.png" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
+  <p><em>Quantitative comparison between the classical heuristic and the RL policy over 500 simulated episodes (100 per seed × 5 seeds). The RL policy significantly outperforms the heuristic across all metrics, reducing average zone damage by nearly 18%, and improving both tracking efficiency and weapon utilization.</em></p>
 </div>
 
 **Behavioral Comparison - Side-by-Side Simulation.** To illustrate the behavioral difference more tangibly, we provide a video comparison where both controllers are subjected to the exact same drone swarm configuration, thanks to controlled simulation seeding.
@@ -135,14 +135,14 @@ The classic policy follows a fixed logic based on proximity and estimated threat
 {{< youtube GooNFDk42Nw >}}
 
 <div style="text-align: center;">
-  <p><em>DeepRL vs Classic Controller - Full Episode Performance Comparison</em></p>
+  <p><em>Side-by-side simulation, highlighting emergent behaviors of the RL agent such as preemptive threat interception, effector load balancing, and zone-focused defense.</em></p>
 </div>
 
 **Final State Snapshot.** A side-by-side image of the simulation's end state clearly shows the impact: while both policies allow some damage, the RL agent more effectively protects the highest-value sensitive zones, redirecting threats or neutralizing them early. The classic controller fails to make such distinctions, resulting in suboptimal damage distribution.
 
 <div style="text-align: center;">
   <img src="final_state.png" alt="Final Simulation Step" style="display: block; margin: 0 auto;" />
-  <p><em>DeepRL vs Classic Controller - Final Simulation Step Comparison</em></p>
+  <p><em>Snapshot of a final simulation step comparing the DeepRL and classic controllers. The DeepRL policy exhibits targeted threat neutralization around the high-value zone (red circle), prioritizing nearby or fast-approaching drones. In contrast, the heuristic controller allocates resources less efficiently, resulting in a more scattered defense and higher residual threat presence near critical assets.</em></p>
 </div>
 
 Together, these results validate the use of reinforcement learning not just as a viable solution, but as a superior one, in orchestrating complex, reactive defense systems under uncertainty.
