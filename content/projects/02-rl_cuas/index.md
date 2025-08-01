@@ -1,7 +1,7 @@
 ---
 title: 🛡️ RL-Driven Counter-UAV Swarm Defense
 summary: Using Reinforcement Learning to coordinate multiple kinetic effectors and defend a sensitive area from large-scale kamikaze drone swarms, trained entirely in a custom-built, high-fidelity simulation.
-date: 2022-01-02
+date: 2025-07-01
 math: true
 authors:
   - admin
@@ -12,6 +12,11 @@ tags:
 image:
   caption: ''
 draft: false
+
+url_code: "https://github.com/alexpalms/deeprl-counter-uav-swarm"
+url_pdf: https://arxiv.org/abs/2210.10595
+url_video: 'https://youtu.be/GooNFDk42Nw'
+
 ---
 
 **TL;DR**: *I trained a centralized Reinforcement Learning policy to coordinate multiple kinetic effectors in defending sensitive zones from kamikaze drone swarms. Built entirely in a custom simulation with noisy detections and probabilistic outcomes, the RL agent learned to prioritize threats more effectively than a handcrafted heuristic. It consistently reduced damage in evaluation, showing strategic coordination and adaptability. Designed as a decision support layer, not a black-box controller, the system is both performant and safe, pointing to RL’s real potential in modern defense scenarios.*
@@ -154,4 +159,5 @@ This experiment not only demonstrated strong performance gains, but also a viabl
 
 ### References
 
-- 👨🏽‍💻 GitHub Code: https://github.com/diambra/
+- 👨🏽‍💻 GitHub Code: https://github.com/alexpalms/deeprl-counter-uav-swarm
+- 🎓 Paper: https://arxiv.org/abs/2210.10595

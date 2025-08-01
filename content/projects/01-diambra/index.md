@@ -1,7 +1,7 @@
 ---
 title: "⚔️ DIAMBRA: Building a Tournament Platform for DeepRL Agents"
 summary: "A platform for training, submitting, and evaluating DeepRL agents in arcade-style environments with real-time tournaments, leaderboards, and community-driven competition."
-date: 2022-01-01
+date: 2025-06-01
 math: true
 authors:
   - admin
