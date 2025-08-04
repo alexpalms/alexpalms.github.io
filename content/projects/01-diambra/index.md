@@ -23,11 +23,16 @@ image:
   caption: ''
 ---
 
+<div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 0px; margin-top: 0px;">
+  <a href="https://arxiv.org/abs/2210.10595" target="_blank">
+    <img style="margin-top:0px; margin-bottom:10px;" src="https://img.shields.io/badge/paper-arXiv:2210.10595-B31B1B?logo=arxiv" alt="Paper"/>
+  </a>
+  <a href="https://github.com/diambra/arena" target="_blank">
+    <img style="margin-top:0px; margin-bottom:10px;" src="https://img.shields.io/badge/code-github-blue?logo=github&labelColor=grey" alt="Code" />
+  </a>
+</div>
+
 **TL;DR**: *Over four years, I built DIAMBRA, an open platform for training, submitting, and evaluating DeepRL agents in arcade-style environments. It blends custom Gym-compatible environments with training pipelines, tournament infrastructure, and real-time evaluation, making it possible to experiment with single- and multi-agent RL, imitation learning, offline training, and even more advanced techniques like league training. Beyond the tech, it’s a space where you can learn by building, and actually enjoy the process of developing agents, because competing in a video game tournament with your own AI never really gets old.*
-
-[Show me the code](#references)
-
--------------------------------------
 
 DIAMBRA is a platform I built over four years to explore what happens when you bring Deep Reinforcement Learning into a competitive, community-driven setting. The idea was simple but ambitious: let people train agents in high-quality arcade-style environments and submit them to real tournaments, complete with leaderboards, Twitch-streamed matches, and unlockable achievements.
 

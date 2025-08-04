@@ -14,14 +14,21 @@ image:
 draft: false
 
 url_code: "https://github.com/alexpalms/deeprl-counter-uav-swarm"
-url_pdf: https://arxiv.org/abs/2210.10595
+url_pdf: https://arxiv.org/abs/2508.00641
 url_video: 'https://youtu.be/GooNFDk42Nw'
 
 ---
 
-**TL;DR**: *I trained a centralized Reinforcement Learning policy to coordinate multiple kinetic effectors in defending sensitive zones from kamikaze drone swarms. Built entirely in a custom simulation with noisy detections and probabilistic outcomes, the RL agent learned to prioritize threats more effectively than a handcrafted heuristic. It consistently reduced damage in evaluation, showing strategic coordination and adaptability. Designed as a decision support layer, not a black-box controller, the system is both performant and safe, pointing to RL’s real potential in modern defense scenarios.*
+<div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 0px; margin-top: 0px;">
+  <a href="https://arxiv.org/abs/2508.00641" target="_blank">
+    <img style="margin-top:0px; margin-bottom:10px;" src="https://img.shields.io/badge/paper-arXiv:2508.00641-B31B1B?logo=arxiv" alt="Paper"/>
+  </a>
+  <a href="https://github.com/alexpalms/deeprl-counter-uav-swarm" target="_blank">
+    <img style="margin-top:0px; margin-bottom:10px;" src="https://img.shields.io/badge/code-github-blue?logo=github&labelColor=grey" alt="Code" />
+  </a>
+</div>
 
-[Show me the code](#references)
+**TL;DR**: *I trained a centralized Reinforcement Learning policy to coordinate multiple kinetic effectors in defending sensitive zones from kamikaze drone swarms. Built entirely in a custom simulation with noisy detections and probabilistic outcomes, the RL agent learned to prioritize threats more effectively than a handcrafted heuristic. It consistently reduced damage in evaluation, showing strategic coordination and adaptability. Designed as a decision support layer, not a black-box controller, the system is both performant and safe, pointing to RL’s real potential in modern defense scenarios.*
 
 ### Motivation
 
@@ -160,4 +167,4 @@ This experiment not only demonstrated strong performance gains, but also a viabl
 ### References
 
 - 👨🏽‍💻 GitHub Code: https://github.com/alexpalms/deeprl-counter-uav-swarm
-- 🎓 Paper: https://arxiv.org/abs/2210.10595
+- 🎓 Paper: https://arxiv.org/abs/2508.00641
