@@ -229,51 +229,38 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Programming & Frameworks
+  - name: Programming
     items:
-      - name: Python
-      - name: C / C++
-      - name: Fortran
-      - name: PyTorch
-      - name: OpenCV
-      - name: Stable Baselines 3
-      - name: Ray RLlib
-      - name: OpenAI Gym / Gymnasium
-      - name: Transformers (HF)
+      - name: C/C++, Python
+      - name: PyTorch, Tensorflow
+      - name: Stable Baselines / Ray RLlib
+      - name: Docker, Kubernetes
+      - name: CI/CD
+      - name: AWS, GCP
+      - name: Git
+      - name: Parallel Computing
 
   - name: AI / Machine Learning
     items:
       - name: Deep Reinforcement Learning
-      - name: Multi-Agent / League Training
-      - name: Offline RL / Hierarchical RL
-      - name: Curriculum Learning
-      - name: Self-Play / Human-in-the-Loop
-      - name: LLMs (SFT, RLHF, DPO, GRPO)
+      - name: Online / Offline RL
+      - name: Imitation / Curriculum Learning
+      - name: Self-Play / League Training
+      - name: Adversarial / Hierarchical RL
+      - name: Multi-Agent / Human-in-the-Loop
+      - name: LLMs (SFT, RLHF)
       - name: VLMs / VLAMs / Multimodal AI
       - name: Computer Vision
-      - name: Model Optimization
 
-skillsmore:
-  - name: Software Engineering
-    items:
-      - name: Docker
-      - name: CI/CD
-      - name: CMake
-      - name: Git
-      - name: Embedded Systems
-      - name: MLOps
-      - name: Parallel Computing
-      - name: Scientific Visualization
   - name: Simulation & Robotics
     items:
       - name: Modeling & Simulation
-      - name: Space Flight Dynamics
-      - name: Multibody Dynamics
-      - name: Autonomous Drones / UAVs
+      - name: Multi-Body Dynamics
+      - name: Space & Atmospheric Flight
+      - name: Robotics Systems
       - name: Sensor Fusion
       - name: Computational Fluid Dynamics
-      - name: Finite Element Analysis
-      - name: 3D CAD Handling & Meshing
+      - name: Computational Geometry
 
 
 languages:
