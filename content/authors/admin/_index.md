@@ -20,12 +20,14 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: AI/ML Engineer
+role: Senior AI/ML Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - name: Ubisoft La Forge - Montreal
     url: https://www.ubisoft.com/en-us/studio/laforge
+  - name: Artificial Twin
+    url: https://artificialtwin.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.

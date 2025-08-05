@@ -67,7 +67,7 @@
 
       {{ range $person.organizations }}
       <div class="mb-2">
-        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener" class="underline hover:text-primary-600 dark:hover:text-primary-400">{{ end }}
         <div>{{ .name }}</div>
         {{ if .url }}</a>{{ end }}
       </div>
@@ -147,7 +147,9 @@
             {{ partial "functions/get_icon" (dict "name" "briefcase" "attributes" "style=\"\" class='flex-shrink-0 w-5 h-5 me-2 mt-1'") }}
             <div class="description">
               <p class="course">{{ .position }}{{ with .year }}, {{ . }}{{ end }}</p>
+              {{ with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener" class="underline hover:text-primary-600 dark:hover:text-primary-400">{{ end }}
               <p class="text-sm">{{ .company_name }}</p>
+              {{ if .company_url }}</a>{{ end }}
             </div>
           </li>
           {{ end }}
