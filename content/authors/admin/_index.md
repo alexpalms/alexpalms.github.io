@@ -149,7 +149,8 @@ work:
     date_start: 2020-11-11
     date_end: 2024-12-11
     summary: |
-      - Founded and led development of DIAMBRA, a global RL agent competition platform with leaderboards and Twitch-streamed matches.
+      - Founded and led development of DIAMBRA, a global RL agent competition platform with leaderboards, achievements, and Twitch-streamed matches.
+      - Designed a distributed RL benchmarking pipeline that supports cli-based model submission, cloud inference, and automated evaluation.
       - Built DIAMBRA Arena, a cross-platform package of high-quality RL environments with Gym-compatible API.
       - Enabled research in single- and multi-agent RL, self-play, imitation learning, and human-in-the-loop settings.
       - Developed seamless integration interface with popular RL libraries like Stable Baselines 3 and Ray RLlib.
