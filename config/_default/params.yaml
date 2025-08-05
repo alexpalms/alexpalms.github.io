@@ -16,6 +16,7 @@ marketing:
     org_name: ''
     description: 'Alessandro Palmas - Senior AI/ML Engineer'
     twitter: ''
+    meta_image: 'media/avatar.jpg'
   analytics:
     google_analytics: ''
     baidu_tongji: ''

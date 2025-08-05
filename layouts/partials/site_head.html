@@ -155,22 +155,34 @@
   {{ $has_logo := fileExists "assets/media/logo.png" | or (fileExists "assets/media/logo.svg") }}
   {{ $og_image := "" }}
   {{ $twitter_card := "summary_large_image" }}
-  {{ if (and (eq .Kind "term") $avatar_image) }}
-    {{/* Match image processing in About widget to prevent generating more images than necessary. */}}
-    {{ $og_image = ($avatar_image.Fill "270x270 Center").Permalink }}
-    {{ $twitter_card = "summary" }}
-  {{ else if $featured_image }}
-    {{ $og_image = $featured_image.Permalink }}
-  {{ else if $sharing_image }}
-    {{ $og_image = $sharing_image.Permalink }}
-  {{ else if $has_logo }}
-    {{/* !CACHED! Can safely cache this site logo variant */}}
-    {{ $og_image = (partialCached "functions/get_logo" (dict "constraint" "fit" "size" 300)).Permalink }}
-    {{ $twitter_card = "summary" }}
-  {{ else }}
-    {{ $og_image = (partial "functions/get_site_icon" 512).Permalink }}
-    {{ $twitter_card = "summary" }}
+
+  {{/* 1. Try to use meta_image from config if set */}}
+  {{ with site.Params.marketing.seo.meta_image }}
+    {{ $meta_img := resources.Get . }}
+    {{ if $meta_img }}
+      {{ $og_image = $meta_img.Permalink }}
+    {{ end }}
   {{ end }}
+
+  {{/* 2. If not set by config, fallback to existing logic */}}
+  {{ if eq $og_image "" }}
+    {{ if and (eq .Kind "term") $avatar_image }}
+      {{ $og_image = ($avatar_image.Fill "270x270 Center").Permalink }}
+      {{ $twitter_card = "summary" }}
+    {{ else if $featured_image }}
+      {{ $og_image = $featured_image.Permalink }}
+    {{ else if $sharing_image }}
+      {{ $og_image = $sharing_image.Permalink }}
+    {{ else if $has_logo }}
+      {{ $og_image = (partialCached "functions/get_logo" (dict "constraint" "fit" "size" 300)).Permalink }}
+      {{ $twitter_card = "summary" }}
+    {{ else }}
+      {{ $og_image = (partial "functions/get_site_icon" 512).Permalink }}
+      {{ $twitter_card = "summary" }}
+    {{ end }}
+  {{ end }}
+
+
   {{ $scr.Set "og_image" $og_image }}{{/* Set `og_image` globally for `rss.xml`. */}}
 
   {{ $title := "" }}
