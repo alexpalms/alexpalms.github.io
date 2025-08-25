@@ -80,7 +80,7 @@ To validate the new multi-discrete support and ensure no regressions on continuo
 
 #### Multi-Discrete Control: Maintenance Scheduling Optimization
  - **Environment**: Custom maintenance scheduling optimization problem, where the agent decides which machine to service at each timestep, for 1 year simulation.
- - **Action Space**: Multi-discrete machine choice.
+ - **Action Space**: Multi-discrete choice.
  - **Goal**: Test the correctness and efficiency of multi-discrete support in RSL-RL.
  - **Validation**: Compared performance and training curves with SB3’s multi-discrete PPO implementation.
 
