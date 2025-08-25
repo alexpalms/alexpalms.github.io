@@ -1,7 +1,7 @@
 ---
 title: '✨ Coming Soon: Adversarial RL for LLM, Specultive Decoding, Triton Kernels, and more ...'
 summary: A glimpse into the research directions I'm actively exploring. From accelerating LLMs to building multi-modal intelligent agents. This is what's coming next.
-date: 2025-08-01
+date: 2025-08-15
 math: true
 authors:
   - admin
