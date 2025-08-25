@@ -78,17 +78,17 @@ These updates make RSL-RL more versatile, opening the door to a broader class of
 
 To validate the new multi-discrete support and ensure no regressions on continuous tasks, I set up two benchmarks:
 
-#### Continuous Control: Unitree Go2 Locomotion
- - **Environment**: Genesis simulator with a Unitree Go2 quadruped robot.
- - **Action Space**: Fully continuous robot controls.
- - **Goal**: Evaluate if the modified RSL-RL still matches or exceeds baseline performance in standard continuous locomotion tasks.
- - **Validation**: Compared training curves with original RSL-RL library results and evaluation runs with Stable Baselines 3 (SB3) using PPO.
-
 #### Multi-Discrete Control: Maintenance Scheduling Optimization
  - **Environment**: Custom maintenance scheduling optimization problem, where the agent decides which machine to service at each timestep, for 1 year simulation.
  - **Action Space**: Multi-discrete machine choice.
  - **Goal**: Test the correctness and efficiency of multi-discrete support in RSL-RL.
  - **Validation**: Compared performance and training curves with SB3’s multi-discrete PPO implementation.
+
+#### Continuous Control: Unitree Go2 Locomotion
+ - **Environment**: Genesis simulator with a Unitree Go2 quadruped robot.
+ - **Action Space**: Fully continuous robot controls.
+ - **Goal**: Evaluate if the modified RSL-RL still matches or exceeds baseline performance in standard continuous locomotion tasks.
+ - **Validation**: Compared training curves with original RSL-RL library results and evaluation runs with Stable Baselines 3 (SB3) using PPO.
 
 Both benchmarks were run **fully on GPU**, ensuring that the new multi-discrete implementation leveraged RSL-RL’s GPU-first design.
 
