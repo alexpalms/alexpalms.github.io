@@ -129,11 +129,11 @@ Each agent was evaluated across **hundreds of randomized episodes**, measuring t
 The results consistently demonstrate the effectiveness of the Deep RL approach.
 
 **Statistical Performance Overview.** A high-volume batch of randomized simulation episodes (same scenario setup, varied drone trajectories) was used to benchmark both the classic and the learned policy.
-The distribution of total suffered damage across these episodes reveals a significant advantage for the RL controller. Gaussian fits over the episode outcomes show a clear shift: the RL agent results in an average damage of 41.30%, compared to 50.34% for the classic heuristic, a meaningful reduction given the critical nature of the defense task. Additional analyses on different metrics are presented in the paper.
+The distribution of total suffered damage across these episodes reveals a significant advantage for the RL controller. Gaussian fits over the episode outcomes show a clear shift: the RL agent results in an average damage of 40.70%, compared to 52.14% for the classic heuristic, a meaningful reduction given the critical nature of the defense task. Additional analyses on different metrics are presented in the paper.
 
 <div style="text-align: center;">
-  <img src="damage_distributions.png" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
-  <p><em>Quantitative comparison between the classical heuristic and the RL policy over 500 simulated episodes (100 per seed × 5 seeds). The RL policy significantly outperforms the heuristic across all metrics, reducing average zone damage by nearly 18%, and improving both tracking efficiency and weapon utilization.</em></p>
+  <img src="damage_distributions.svg" alt="Damage Comparison" style="display: block; margin: 0 auto;" />
+  <p><em>Quantitative comparison between the classical heuristic and the RL policy over 500 simulated episodes (100 per seed × 5 seeds). The RL policy significantly outperforms the heuristic across all metrics, reducing average zone damage by nearly 22%, and improving both tracking efficiency and weapon utilization.</em></p>
 </div>
 
 **Behavioral Comparison - Side-by-Side Simulation.** To illustrate the behavioral difference more tangibly, we provide a video comparison where both controllers are subjected to the exact same drone swarm configuration, thanks to controlled simulation seeding.
