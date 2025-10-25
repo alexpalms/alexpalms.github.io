@@ -121,13 +121,11 @@ work:
     date_start: 2025-10-17
     date_end: ''
     summary: |
-      - Built and deployed Deep Reinforcement Learning systems for integration into AAA game environments.
-      - Designed scalable Curriculum and Multi-Agent RL algorithms like League Training.
-      - Worked on Online, Imitation, Offline, and Hierarchical RL, currently exploring multimodal and LLM/VLM agents.
-      - Led development of a distributed RL training pipeline and coordinated cross-site teams.
-      - Integrated AI models into proprietary engines for NPC behavior, testing, and live simulations.
-    gist: Built and deployed advanced Deep RL systems for AAA games, including scalable multi-agent and curriculum-based algorithms. Led cross-site development of a distributed training pipeline and integrated AI models into proprietary engines for NPCs and simulations.
-    skills: C++ · Python · PyTorch · Foundation Models · Large Language Models (LLM) · Generative Flow Networks · vLLM · Docker
+      - Core member of the research and engineering team at LawZero, a non-profit AI research lab led by Yoshua Bengio.
+      - Working on foundation models that are truthful, transparent, and safe-by-design.
+      - Bridging deep research and large-scale engineering to advance reasoning, alignment, and interpretability in AI systems.
+    gist: Core member of the research and engineering team at LawZero, a non-profit AI research lab led by Yoshua Bengio, advancing safe, transparent, and interpretable AI systems that reason about the world.
+    skills: C++ · Python · PyTorch · vLLM · Docker · Foundation Models · Large Language Models (LLM) · Generative Flow Networks
   - position: Senior AI/ML Research Engineer
     company_name: Ubisoft La Forge - Montreal
     contract: Permanent Full-time
@@ -259,14 +257,15 @@ skills:
 
   - name: AI / Machine Learning
     items:
+      - name: Foundation Models
+      - name: LLMs (SFT, RLHF)
+      - name: VLMs / VLAs / Multimodal AI
       - name: Deep Reinforcement Learning
       - name: Online / Offline RL
       - name: Imitation / Curriculum Learning
       - name: Self-Play / League Training
       - name: Adversarial / Hierarchical RL
       - name: Multi-Agent / Human-in-the-Loop
-      - name: LLMs (SFT, RLHF)
-      - name: VLMs / VLAMs / Multimodal AI
       - name: Computer Vision
 
   - name: Simulation & Robotics
@@ -326,7 +325,7 @@ awards:
 
 I’m an applied AI/ML research engineer with 15+ years of experience building intelligent systems that combine **foundation models, reinforcement learning, multimodal AI, and high-fidelity simulation**. My work bridges foundational research and production-grade solutions across aerospace, defense, robotics, and gaming.
 
-Currently part of the **core research and engineering team at LawZero**, a non-profit AI lab in Montreal led by **Yoshua Bengio**, I focus on **advancing foundational models, reasoning architectures, and safe-by-design AI**.
+Currently part of the **core research and engineering team at LawZero**, a non-profit AI lab in Montreal led by **Yoshua Bengio**, I focus on **advancing foundation models, reasoning architectures, and safe-by-design AI**.
 
 I’m **passionate about combining foundation model, embodied learning, RL, and multimodal AI to tackle complex real-world challenges**, designing systems that understand and reason about the world rather than simply act in it.
 
