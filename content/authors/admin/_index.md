@@ -20,12 +20,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI/ML Engineer
+role: Senior AI/ML Research Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Ubisoft La Forge - Montreal
-    url: https://www.ubisoft.com/en-us/studio/laforge
+  - name: LawZero - Montreal
+    url: https://lawzero.org/en
   - name: Artificial Twin
     url: https://artificialtwin.com/
 
@@ -49,9 +49,9 @@ profiles:
   #  url: https://orcid.org/
 
 interests:
+  - "Foundation Models"
   - Reinforcement Learning
-  - LLMs / VLMs / VLAMs
-  - Embodied/Physical AI
+  - Embodied / Physical AI
 
 education:
   - area: MSc by Research (Post Graduate) Space Engineering
@@ -113,13 +113,28 @@ education:
 
       Thesis in Space Flight Dynamics: developed a software simulator for orbital transfer maneuvers used to compute the Pareto front in Lambert’s Problem context, using a novel parametrization function of transfer orbit eccentricity.
 work:
-  - position: Senior AI/ML Engineer
+  - position: Senior AI/ML Research Engineer
+    company_name: LawZero - Montreal
+    contract: Permanent Full-time
+    company_url: 'https://lawzero.org/en'
+    company_logo: ''
+    date_start: 2025-10-17
+    date_end: ''
+    summary: |
+      - Built and deployed Deep Reinforcement Learning systems for integration into AAA game environments.
+      - Designed scalable Curriculum and Multi-Agent RL algorithms like League Training.
+      - Worked on Online, Imitation, Offline, and Hierarchical RL, currently exploring multimodal and LLM/VLM agents.
+      - Led development of a distributed RL training pipeline and coordinated cross-site teams.
+      - Integrated AI models into proprietary engines for NPC behavior, testing, and live simulations.
+    gist: Built and deployed advanced Deep RL systems for AAA games, including scalable multi-agent and curriculum-based algorithms. Led cross-site development of a distributed training pipeline and integrated AI models into proprietary engines for NPCs and simulations.
+    skills: C++ · Python · PyTorch · Foundation Models · Large Language Models (LLM) · Generative Flow Networks · vLLM · Docker
+  - position: Senior AI/ML Research Engineer
     company_name: Ubisoft La Forge - Montreal
     contract: Permanent Full-time
     company_url: 'https://www.ubisoft.com/en-us/studio/laforge'
     company_logo: ''
     date_start: 2022-12-05
-    date_end: ''
+    date_end: 2025-10-03
     summary: |
       - Built and deployed Deep Reinforcement Learning systems for integration into AAA game environments.
       - Designed scalable Curriculum and Multi-Agent RL algorithms like League Training.
@@ -309,7 +324,9 @@ awards:
 
 ## About Me
 
-Applied AI/ML Engineer with 15 years of experience building intelligent agents through Reinforcement Learning, Multimodal Models, and Simulation.
-Delivered production-grade solutions across industries from aerospace and defense to robotics.
-My work spans Reinforcement Learning, physics-based Modeling and Simulation, and now expanding into LLMs, VLMs, and VLAMs.
-Focused on combining embodied learning with RL and multimodal AI to tackle real-world challenges.
+I’m an applied AI/ML research engineer with 15+ years of experience building intelligent systems that combine **foundation models, reinforcement learning, multimodal AI, and high-fidelity simulation**. My work bridges foundational research and production-grade solutions across aerospace, defense, robotics, and gaming.
+
+Currently part of the **core research and engineering team at LawZero**, a non-profit AI lab in Montreal led by **Yoshua Bengio**, I focus on **advancing foundational models, reasoning architectures, and safe-by-design AI**.
+
+I’m **passionate about combining foundation model, embodied learning, RL, and multimodal AI to tackle complex real-world challenges**, designing systems that understand and reason about the world rather than simply act in it.
+
