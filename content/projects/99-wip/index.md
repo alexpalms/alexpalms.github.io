@@ -21,7 +21,7 @@ url_video: ""
 
 ### 🚧 What's Next: Current Directions and Upcoming Projects
 
-This page offers a concise roadmap of the key research areas and projects I'm actively working on or preparing to launch. These efforts range from foundational LLM optimization to new frontiers in embodied and agentic AI.
+This page offers a concise roadmap of the key research areas and projects I'm actively working on or preparing to launch. These efforts range from foundation LLM optimization to new frontiers in embodied and agentic AI.
 
 ---
 
