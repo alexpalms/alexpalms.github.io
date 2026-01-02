@@ -327,5 +327,6 @@ I’m an applied AI/ML research engineer with 15+ years of experience building i
 
 Currently part of the **core research and engineering team at LawZero**, a non-profit AI lab in Montreal led by **Yoshua Bengio**, I focus on **advancing foundation models, reasoning architectures, and safe-by-design AI**.
 
-I’m **passionate about combining foundation model, embodied learning, RL, and multimodal AI to tackle complex real-world challenges**, designing systems that understand and reason about the world rather than simply act in it.
+Actively working on **large-scale, distributed reinforcement learning finetuning of foundation models**, leveraging verifiable rewards for code-focused LLMs, and building hands-on expertise in RL applied to foundation models.
 
+I’m **passionate about combining foundation model, embodied learning, RL, and multimodal AI to tackle complex real-world challenges**, designing systems that understand and reason about the world rather than simply act in it.
