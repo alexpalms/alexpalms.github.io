@@ -41,7 +41,8 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year}. All rights reserved.'
+    #notice: '© {year}. All rights reserved.'
+    notice: '© 2025-present. All rights reserved.'
     license:
       enable: false
       allow_derivatives: false

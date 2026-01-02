@@ -27,7 +27,7 @@ url_video: ''
   </a>
 </div>
 
-**TL;DR**: *I extended the RSL-RL library to support **multi-discrete action spaces** while keeping continuous control fully intact. Benchmarks show RSL-RL matches Stable Baselines 3 in performance on both tasks and **runs faster thanks to full GPU execution**. This makes RSL-RL a versatile, high-speed option for robotics, scheduling, and other decision-making problems.*
+**TL;DR**: *How I extended the RSL-RL library to support **multi-discrete action spaces** while keeping continuous control fully intact. Benchmarks show RSL-RL matches Stable Baselines 3 in performance on both tasks and **runs faster thanks to full GPU execution**. This makes RSL-RL a versatile, high-speed option for robotics, scheduling, and other decision-making problems.*
 
 ### Introduction
 
