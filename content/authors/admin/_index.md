@@ -35,14 +35,14 @@ profiles:
   - icon: at-symbol
     url: 'mailto:alessandropalmas.mail@gmail.com'
     label: E-mail Me
-  #- icon: brands/x
-  #  url: https://twitter.com/GetResearchDev
   #- icon: brands/instagram
   #  url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/alexpalms
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/alessandropalmas/
+  - icon: brands/x
+    url: https://twitter.com/alexpalms_
   #- icon: academicons/google-scholar
   #  url: https://scholar.google.ca/citations?user=Tg-zYXMAAAAJ&hl=en
   #- icon: academicons/orcid
