@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI/ML Research Engineer
+role: Senior Research Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -113,7 +113,7 @@ education:
 
       Thesis in Space Flight Dynamics: developed a software simulator for orbital transfer maneuvers used to compute the Pareto front in Lambert’s Problem context, using a novel parametrization function of transfer orbit eccentricity.
 work:
-  - position: Senior AI/ML Research Engineer
+  - position: Senior Research Engineer
     company_name: LawZero - Montreal
     contract: Permanent Full-time
     company_url: 'https://lawzero.org/en'
@@ -126,7 +126,7 @@ work:
       - Bridging deep research and large-scale engineering to advance reasoning, alignment, and interpretability in AI systems.
     gist: Core member of the research and engineering team at LawZero, a non-profit AI research lab led by Yoshua Bengio, advancing safe, transparent, and interpretable AI systems that reason about the world.
     skills: C++ · Python · PyTorch · vLLM · Docker · Foundation Models · Large Language Models (LLM) · Generative Flow Networks
-  - position: Senior AI/ML Research Engineer
+  - position: Senior Research Engineer
     company_name: Ubisoft La Forge - Montreal
     contract: Permanent Full-time
     company_url: 'https://www.ubisoft.com/en-us/studio/laforge'
@@ -156,7 +156,7 @@ work:
       - Created and maintained core libraries for AI/ML, Computational Geometry, and Physical Modeling.
     gist: Led end-to-end AI/ML development across RL, LLMs, CV, and MLOps for real and simulated environments. Built and deployed transformer-based models, VLAM prototypes, and industrial CV systems, while maintaining core AI and geometry libraries.
     skills: C++ · Python · PyTorch · Deep Reinforcement Learning · Large Language Models (LLM) · Computer Vision · Deep Learning · Computational Geometry · Vision Language Models (VLM) · Vision Language Action Models (VLAM) · Reinforcement Learning · Computational Fluid Dynamics
-  - position: Founder & Principal AI/ML Engineer
+  - position: Founder & Principal Research Engineer
     company_name: DIAMBRA (Acquired in Dec 2024)
     contract: Part-time
     company_url: 'https://diambra.ai/'
