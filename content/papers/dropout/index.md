@@ -42,9 +42,9 @@ featured: false
 
 links:
 - name: 'Project'
-  url: 'https://saifh-github.github.io/llm-dropout-noise-recognition/'
+  url: 'https://lawzero-org.github.io/llm-dropout-noise-recognition/'
 url_pdf: https://arxiv.org/pdf/2604.17465
-url_code: 'https://github.com/saifh-github/llm-dropout-noise-recognition'
+url_code: 'https://github.com/lawzero-org/llm-dropout-noise-recognition'
 url_dataset: ''
 url_project: ''
 url_slides: ''

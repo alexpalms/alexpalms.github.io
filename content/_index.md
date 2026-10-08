@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/PALMAS_Resume_2025.pdf
+        url: uploads/PALMAS_Resume.pdf
     design:
       css_class: dark
       background:

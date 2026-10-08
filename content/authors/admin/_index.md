@@ -113,7 +113,7 @@ education:
 
       Thesis in Space Flight Dynamics: developed a software simulator for orbital transfer maneuvers used to compute the Pareto front in Lambert’s Problem context, using a novel parametrization function of transfer orbit eccentricity.
 work:
-  - position: Senior Research Engineer
+  - position: Member of Technical Staff
     company_name: LawZero - Montreal
     contract: Permanent Full-time
     company_url: 'https://lawzero.org/en'
@@ -121,9 +121,10 @@ work:
     date_start: 2025-10-17
     date_end: ''
     summary: |
-      - Core member of the research and engineering team at LawZero, a non-profit AI research lab led by Yoshua Bengio.
-      - Working on foundation models that are truthful, transparent, and safe-by-design.
-      - Bridging deep research and large-scale engineering to advance reasoning, alignment, and interpretability in AI systems.
+      - RL-based post-training on proprietary clusters, leveraging multi-dimensional parallelism, optimized training/rollouts, and async/off-policy mechanisms.
+      - Large-scale distributed RL fine-tuning of foundation models across hundreds of GPUs, using verifiable environments for controllable reasoning in language, math, and code.
+      - Advanced monitoring and guardrailing using activation probes, LLM classifiers, LLM-as-a-judge, and debate frameworks.
+      - Model introspection research on training and evaluation awareness to better understand internal model mechanics.
     gist: Core member of the research and engineering team at LawZero, a non-profit AI research lab led by Yoshua Bengio, advancing safe, transparent, and interpretable AI systems that reason about the world.
     skills: C++ · Python · PyTorch · vLLM · Docker · Foundation Models · Large Language Models (LLM) · Generative Flow Networks
   - position: Senior Research Engineer
@@ -323,10 +324,12 @@ awards:
 
 ## About Me
 
-I’m an applied AI/ML research engineer with 15+ years of experience building intelligent systems that combine **foundation models, reinforcement learning, multimodal AI, and high-fidelity simulation**. My work bridges foundational research and production-grade solutions across aerospace, defense, robotics, and gaming.
+I’m a **Senior ML Research Engineer** with 15+ years of experience building intelligent systems across **foundation models, reinforcement learning, multimodal AI, and high-fidelity simulation**. My work spans the spectrum from emerging research to production-scale engineering, with a focus on turning new ideas into scalable and reliable AI systems.
 
-Currently part of the **core research and engineering team at LawZero**, a non-profit AI lab in Montreal led by **Yoshua Bengio**, I focus on **advancing foundation models, reasoning architectures, and safe-by-design AI**.
+Currently, I’m part of the **core research and engineering team at LawZero**, a non-profit AI research lab in Montreal led by **Yoshua Bengio** that raised 300M+ USD to date, working on the next generation of foundation models and safe-by-design AI.
 
-Actively working on **large-scale, distributed reinforcement learning finetuning of foundation models**, leveraging verifiable rewards for code-focused LLMs, and building hands-on expertise in RL applied to foundation models.
+My current research focuses on **large-scale post-training of foundation models with reinforcement learning**, including distributed RL at hundreds-of-GPUs scale, verifiable training environments and rewards, reasoning models, model evaluation, and inference optimization. I’m particularly interested in the systems and algorithms required to make foundation models **more capable, controllable, and reliable**.
 
-I’m **passionate about combining foundation model, embodied learning, RL, and multimodal AI to tackle complex real-world challenges**, designing systems that understand and reason about the world rather than simply act in it.
+Before focusing on foundation models, I spent more than a decade developing intelligent systems across **aerospace, defense, robotics, and gaming**, with extensive experience in deep reinforcement learning, multi-agent systems, simulation, autonomy, and multimodal AI.
+
+I’m particularly interested in the intersection of **foundation models, reinforcement learning, and embodied intelligence**—and in building systems that can reason, adapt, and ultimately understand the world rather than merely act in it.
